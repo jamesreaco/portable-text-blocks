@@ -25,6 +25,7 @@ export default {
       type: 'array',
       of: [
         { type: 'block' },
+        { type: 'imageGallery' },
       ]
     },
   ]
