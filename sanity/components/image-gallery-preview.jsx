@@ -16,7 +16,7 @@ export default function ImageGalleryPreview(props) {
           gap: '5px' 
         }}
       >
-        {images.map((image) => (
+        {images?.map((image) => (
           <Image
             key={image._ref}
             src={image.asset ? urlFor(image).url() : ''}
