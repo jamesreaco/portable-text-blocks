@@ -1,31 +1,33 @@
-import Image from 'next/image'
-import { Flex } from '@sanity/ui'
+import { Flex, Stack } from '@sanity/ui'
 import { urlFor } from '@/sanity/lib/sanity.image'
 
 export default function ImageGalleryPreview(props) {
 
-  const { images } = props
+  const { images, schemaType } = props
+  const title = schemaType.title
 
   return (
-    <>
-      {props.renderDefault(props)}
+    <Stack space={[1]}>
+      {props.renderDefault({...props, title})}
       <Flex 
         style={{ 
-          marginTop: '5px',
-          overflowX: 'scroll', 
-          gap: '5px' 
+          gap: '5px',
+          overflowX: 'scroll'
         }}
       >
         {images?.map((image) => (
-          <Image
+          <img
             key={image._ref}
             src={image.asset ? urlFor(image).url() : ''}
-            width={400}
-            height={400}
-            className='object-contain'
+            style={{
+              width: '400px',
+              height: '200px',
+              objectFit: 'cover',
+            }}
+            alt={image.alt}
           />
         ))}
       </Flex>
-    </>
+    </Stack>
   )
 }

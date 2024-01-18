@@ -6,20 +6,6 @@ export default {
   title: 'Image Gallery',
   type: 'object',
   icon: ImagesIcon,
-  preview: {
-    select: { 
-      images: 'images' 
-    },
-    prepare(selection) {
-      return {
-        images: selection.images,
-        title: "Image Gallery",
-      };
-    },
-  },
-  components: {
-    preview: ImageGalleryPreview,
-  }, 
   fields: [
     {
       name: 'images',
@@ -36,5 +22,13 @@ export default {
         ]
       }],
     },
-  ]
+  ],
+  preview: {
+    select: { 
+      images: 'images',
+    },
+  },
+  components: {
+    preview: ImageGalleryPreview,
+  }, 
 }
