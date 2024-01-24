@@ -3,9 +3,11 @@ import { useState } from 'react'
 import { urlFor } from '@/sanity/lib/sanity.image'
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-export default function ImageGallery({ images }) {
+export default function ImageGallery({ props }) {
 
   const [index, setIndex] = useState(0)
+  
+  const { images } = props
   let image = images[index]
 
   function handlePrevious(e) {

@@ -27,6 +27,7 @@ export default {
         { type: 'block' },
         { type: 'imageGallery' },
         { type: 'quote' },
+        { type: 'quiz' },
       ]
     },
   ]

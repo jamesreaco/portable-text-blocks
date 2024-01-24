@@ -4,15 +4,17 @@ import ImageGallery from './blocks/image-gallery'
 import Quote from './blocks/quote'
 import Link from 'next/link'
 import { FiArrowUpRight } from "react-icons/fi";
+import Quiz from './blocks/quiz'
 
 const serializers = {
   imageGallery: ({ value }) => {
-    const { images } = value
-    return <ImageGallery images={images} />
+    return <ImageGallery props={value} />
   },
   quote: ({ value }) => {
-    const props = value
-    return <Quote props={props} />
+    return <Quote props={value} />
+  },
+  quiz: ({ value }) => {
+    return <Quiz props={value} />
   },
 }
 
