@@ -26,6 +26,7 @@ export default {
       of: [
         { type: 'block' },
         { type: 'imageGallery' },
+        { type: 'quote' },
       ]
     },
   ]

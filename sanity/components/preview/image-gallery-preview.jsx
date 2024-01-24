@@ -4,11 +4,18 @@ import { urlFor } from '@/sanity/lib/sanity.image'
 export default function ImageGalleryPreview(props) {
 
   const { images, schemaType } = props
-  const title = schemaType.title
+  const schemaTitle = schemaType.title
+
+  const modifiedProps = { 
+    ...props, 
+    title: schemaTitle,
+  }
 
   return (
     <Stack space={[1]}>
-      {props.renderDefault({...props, title})}
+      <>
+        {props.renderDefault(modifiedProps)}
+      </>
       <Flex 
         style={{ 
           gap: '5px',

@@ -1,5 +1,5 @@
 import { ImagesIcon } from '@sanity/icons'
-import ImageGalleryPreview from '@/sanity/components/image-gallery-preview';
+import ImageGalleryPreview from '@/sanity/components/preview/image-gallery-preview';
 
 export default {
   name: 'imageGallery',
