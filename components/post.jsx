@@ -1,10 +1,11 @@
 "use client"
+import Link from 'next/link'
+import { FiArrowUpRight } from "react-icons/fi";
 import { PortableText } from '@portabletext/react'
 import ImageGallery from './blocks/image-gallery'
 import Quote from './blocks/quote'
-import Link from 'next/link'
-import { FiArrowUpRight } from "react-icons/fi";
 import Quiz from './blocks/quiz'
+import Gif from './blocks/gif'
 
 const serializers = {
   imageGallery: ({ value }) => {
@@ -15,6 +16,9 @@ const serializers = {
   },
   quiz: ({ value }) => {
     return <Quiz props={value} />
+  },
+  gif: ({ value }) => {
+    return <Gif props={value} />
   },
 }
 

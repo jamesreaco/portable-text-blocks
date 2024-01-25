@@ -28,6 +28,7 @@ export default {
         { type: 'imageGallery' },
         { type: 'quote' },
         { type: 'quiz' },
+        { type: 'gif' },
       ]
     },
   ]
