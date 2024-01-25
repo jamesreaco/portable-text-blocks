@@ -21,19 +21,13 @@ export default function Quiz({ props }) {
     }
   }
 
-  function handleReset() {
-    setChosenAnswer(null)
-    setCorrectAnswer(null)
-    setMessage(null)
-  }
-
   return (
-    <div className='my-[40px] block mx-auto w-full'>
-      <div className='flex flex-col p-[60px] bg-zinc-900 text-white'>
+    <div className='my-[20px]'>
+      <div className='relative flex flex-col p-[60px] bg-zinc-900 text-white'>
         <div className="text-[22px]">
           {question}
         </div>
-        <div className="mt-[20px] flex flex-col gap-[12px]">
+        <div className="mt-[20px] pb-[16px] flex flex-col gap-[12px]">
           {answers.map((answer) => (
             <button 
               key={answer._key}
@@ -54,7 +48,6 @@ export default function Quiz({ props }) {
           <Message 
             message={message} 
             correctAnswer={correctAnswer} 
-            handleReset={handleReset} 
           />
         )}
       </div>
@@ -86,22 +79,12 @@ function WrongAnswerIcon() {
   )
 }
 
-function Message({message, correctAnswer, handleReset}) {
+function Message({message, correctAnswer }) {
    return (
-    <div className="mt-[12px] text-center">
-      <div 
-        style={{
-          color: correctAnswer ? '#72d673' : '#ea7575'
-        }}
-      >
+    <div className="absolute bottom-[28px] left-1/2 transform -translate-x-1/2 text-center">
+      <div style={{ color: correctAnswer ? '#72d673' : '#ea7575' }}>
         {message}
       </div>
-      <button 
-        onClick={() => handleReset()}
-        className="hover:text-zinc-200"
-      >
-        Reset
-      </button>
     </div>
    )
 }

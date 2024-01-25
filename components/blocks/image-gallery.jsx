@@ -29,7 +29,7 @@ export default function ImageGallery({ props }) {
   }
  
   return (
-    <div className='mt-[18px]'>
+    <div className='my-[20px]'>
       <Image
         key={image._key}
         src={image.asset ? urlFor(image).url() : ''}
@@ -45,13 +45,13 @@ export default function ImageGallery({ props }) {
         <div className='flex gap-[16px]'>
           <button 
             onClick={(e) => handlePrevious(e)}
-            className='p-[12px] border border-zinc-700 transition hover:bg-zinc-900'
+            className='p-[12px] bg-zinc-900 transition border border-zinc-900 hover:border-zinc-800'
           >
             <FiChevronLeft />
           </button>
           <button 
             onClick={(e) => handleNext(e)}
-            className='p-[12px] border border-zinc-700 transition hover:bg-zinc-900'
+            className='p-[12px] bg-zinc-900 transition border border-zinc-900 hover:border-zinc-800'
           >
             <FiChevronRight />
           </button>
