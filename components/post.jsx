@@ -33,10 +33,9 @@ const typeSerializers = {
 const markSerializers = {
   link: ({ value, children }) => {
     return (
-      <PortableTextLink 
-        props={value} 
-        children={children} 
-      />
+      <PortableTextLink props={value}>
+        {children}
+      </PortableTextLink>
     )
   },
 }
