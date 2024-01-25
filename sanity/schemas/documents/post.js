@@ -1,4 +1,5 @@
 import { FolderIcon } from '@sanity/icons'
+import link from '../objects/link'
 
 export default {
   name: 'post',
@@ -24,7 +25,14 @@ export default {
       title: 'Content',
       type: 'array',
       of: [
-        { type: 'block' },
+        { 
+          type: 'block',
+          marks: {
+            annotations: [
+              link
+            ]
+          },
+        }, 
         { type: 'imageGallery' },
         { type: 'quote' },
         { type: 'quiz' },

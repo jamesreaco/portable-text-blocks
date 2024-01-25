@@ -7,8 +7,9 @@ import Quote from './blocks/quote'
 import Quiz from './blocks/quiz'
 import Gif from './blocks/gif'
 import Callout from './blocks/callout';
+import PortableTextLink from './blocks/link';
 
-const serializers = {
+const typeSerializers = {
   imageGallery: ({ value }) => {
     return <ImageGallery props={value} />
   },
@@ -24,6 +25,20 @@ const serializers = {
   callout: ({ value }) => {
     return <Callout props={value} />
   },
+  link: ({ value }) => {
+    return <Callout props={value} />
+  },
+}
+
+const markSerializers = {
+  link: ({ value, children }) => {
+    return (
+      <PortableTextLink 
+        props={value} 
+        children={children} 
+      />
+    )
+  },
 }
 
 export default function Post({ post }) {
@@ -38,7 +53,10 @@ export default function Post({ post }) {
       <div className='mt-[26px] antialiased pt-content'>
         <PortableText 
           value={post?.content} 
-          components={{ types: serializers }}
+          components={{ 
+            types: typeSerializers,
+            marks: markSerializers
+          }}
         />
       </div>
     </>
