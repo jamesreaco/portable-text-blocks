@@ -15,7 +15,11 @@ export default async function PostsPage() {
       </h1>
       <div className='mt-[30px]'>
         {posts.map(({ title, slug }) => (
-          <PostCard title={title} slug={slug} />
+          <PostCard 
+            key={slug}
+            title={title} 
+            slug={slug} 
+          />
         ))}
       </div>
     </Container>
