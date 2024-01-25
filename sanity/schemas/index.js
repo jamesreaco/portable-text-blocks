@@ -1,4 +1,5 @@
 import post from "./documents/post";
+import callout from "./objects/callout";
 import gif from "./objects/gif";
 import imageGallery from "./objects/image-gallery";
 import quiz from "./objects/quiz";
@@ -9,5 +10,6 @@ export const schemaTypes = [
   imageGallery,
   quote, 
   quiz,
-  gif
+  gif,
+  callout
 ]

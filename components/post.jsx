@@ -6,6 +6,7 @@ import ImageGallery from './blocks/image-gallery'
 import Quote from './blocks/quote'
 import Quiz from './blocks/quiz'
 import Gif from './blocks/gif'
+import Callout from './blocks/callout';
 
 const serializers = {
   imageGallery: ({ value }) => {
@@ -19,6 +20,9 @@ const serializers = {
   },
   gif: ({ value }) => {
     return <Gif props={value} />
+  },
+  callout: ({ value }) => {
+    return <Callout props={value} />
   },
 }
 

@@ -29,6 +29,7 @@ export default {
         { type: 'quote' },
         { type: 'quiz' },
         { type: 'gif' },
+        { type: 'callout' },
       ]
     },
   ]
