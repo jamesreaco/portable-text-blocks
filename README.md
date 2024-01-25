@@ -8,12 +8,12 @@ If you find this project helpful don't forget to give it a watch and star to be 
 
 If there's a particular block you'd like added [send me an email](mailto:hello@jamesrea.co).
 
-[Image Gallery](images/callout.png)
+[Image Gallery](./public/images/image-gallery.png)
 
-[Quote](images/callout.png)
+[Quote](./public/images/quote.png)
 
-[Callout](images/callout.png)
+[Callout](./public/images/callout.png)
 
-[Quiz](images/callout.png)
+[Quiz](./public/images/callout.png)
 
-[GIF](images/callout.png)
+[GIF](./public/images/callout.png)
