@@ -35,7 +35,7 @@ export default function Post({ post }) {
       <h1 className='text-[38px] antialiased'>
         {post?.title}
       </h1>
-      <div className='mt-[26px] antialiased'>
+      <div className='mt-[26px] antialiased pt-content'>
         <PortableText 
           value={post?.content} 
           components={{ types: serializers }}

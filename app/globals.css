@@ -6,3 +6,13 @@ body {
   background-color: rgb(19, 19, 19);
   color: #fff;
 }
+
+.pt-content > p > a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pt-content > p > a:hover {
+  transition: all 0.2s ease-in-out;
+  color: #7474ff
+}
