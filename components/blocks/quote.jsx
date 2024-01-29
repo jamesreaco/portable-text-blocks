@@ -25,7 +25,7 @@ export default function Quote({ props }) {
         />
       </div>
       <div 
-        className='mt-[12px] text-[20px] md:text-[24px] text-center' 
+        className='mt-[8px] text-[20px] md:text-[24px] text-center' 
         style={{ 
           color: theme === 'dark' ? 'white' : 'black' 
         }}

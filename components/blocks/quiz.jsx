@@ -23,11 +23,11 @@ export default function Quiz({ props }) {
 
   return (
     <div className='my-[20px]'>
-      <div className='relative flex flex-col p-[60px] bg-zinc-900 text-white'>
-        <div className="text-[22px]">
+      <div className='relative flex flex-col p-[30px] pb-[60px] md:p-[60px] bg-zinc-900 text-white'>
+        <div className="text-[18px] md:text-[22px]">
           {question}
         </div>
-        <div className="mt-[20px] pb-[16px] flex flex-col gap-[12px]">
+        <div className="mt-[30px] md:mt-[20px] pb-[16px] flex flex-col gap-[12px]">
           {answers.map((answer) => (
             <button 
               key={answer._key}
@@ -81,7 +81,7 @@ function WrongAnswerIcon() {
 
 function Message({message, correctAnswer }) {
    return (
-    <div className="absolute bottom-[28px] left-1/2 transform -translate-x-1/2 text-center">
+    <div className="w-full absolute bottom-[28px] left-1/2 transform -translate-x-1/2 text-center">
       <div style={{ color: correctAnswer ? '#72d673' : '#ea7575' }}>
         {message}
       </div>

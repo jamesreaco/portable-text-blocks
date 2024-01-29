@@ -7,12 +7,12 @@ export default function Callout({ props }) {
 
   return (
     <div 
-      className='my-[20px] flex items-start gap-[20px] p-[40px] text-white' 
+      className='my-[20px] flex flex-col md:flex-row items-start gap-[20px] p-[40px] text-white' 
       style={{ 
         backgroundColor: intent === 'tip' ? '#073e33' : '#6d2929' 
       }}
     >
-      <div>
+      <div className="ml-[-6px] md:ml-0">
         {intent === 'tip' ? <MdLightbulbOutline size={30}/> : <IoMdAlert size={30}/>}
       </div>
       <div>

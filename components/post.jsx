@@ -46,7 +46,7 @@ export default function Post({ post }) {
 
   return (
     <>
-      <h1 className='text-[38px] antialiased'>
+      <h1 className='text-[32px] md:text-[38px] antialiased'>
         {post?.title}
       </h1>
       <div className='mt-[26px] antialiased pt-content'>
