@@ -46,10 +46,10 @@ export default function Post({ post }) {
 
   return (
     <>
-      <h1 className='text-[32px] md:text-[38px] antialiased'>
+      <h1 className='text-3xl md:text-4xl antialiased'>
         {post?.title}
       </h1>
-      <div className='mt-[26px] antialiased pt-content'>
+      <div className='mt-6 antialiased pt-content'>
         <PortableText 
           value={post?.content} 
           components={{ 
@@ -65,12 +65,12 @@ export default function Post({ post }) {
 function NotFound() {
   return (
     <div className='flex flex-col text-center antialiased'>
-      <h1 className='text-[28px]'>
+      <h1 className='text-3xl'>
         Post Not Found
       </h1>
       <Link 
         href="/"
-        className='mx-auto flex items-center gap-[8px] mt-[8px] font-semibold group'
+        className='mx-auto flex items-center gap-2 mt-2 font-semibold group'
       >
         <span>Go Home</span> <FiArrowUpRight className='transition group-hover:rotate-45'/>
       </Link>

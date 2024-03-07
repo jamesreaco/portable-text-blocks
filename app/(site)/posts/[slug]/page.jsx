@@ -9,7 +9,7 @@ export default async function PostsPage({ params }) {
   const post = await getPostBySlug(params.slug)
 
   return (
-    <Container classNames="my-[80px]">
+    <Container classNames="my-20">
       <Post post={post} />
     </Container>
   )

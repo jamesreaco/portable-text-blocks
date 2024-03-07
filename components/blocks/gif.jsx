@@ -6,7 +6,7 @@ export default function Gif({ props }) {
   const { gif } = props
  
   return (
-    <div className='my-[20px]'>
+    <div className='my-5'>
       <Image
         key={gif?._key}
         src={gif?.asset ? urlFor(gif).url() : ''}
@@ -15,7 +15,7 @@ export default function Gif({ props }) {
         alt={gif?.alt}
         className='h-auto object-cover'
       />
-      <div className='mt-[16px]'>
+      <div className='mt-4'>
         <span>
           {gif?.alt ? gif.alt : ''}
         </span>

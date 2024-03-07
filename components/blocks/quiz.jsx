@@ -22,17 +22,17 @@ export default function Quiz({ props }) {
   }
 
   return (
-    <div className='my-[20px]'>
-      <div className='relative flex flex-col p-[30px] pb-[60px] md:p-[60px] bg-zinc-900 text-white'>
-        <div className="text-[18px] md:text-[22px]">
+    <div className='my-5'>
+      <div className='relative flex flex-col p-8 pb-16 md:p-16 bg-zinc-900 text-white'>
+        <div className="text-lg md:text-xl">
           {question}
         </div>
-        <div className="mt-[30px] md:mt-[20px] pb-[16px] flex flex-col gap-[12px]">
+        <div className="mt-8 md:mt-5 pb-4 flex flex-col gap-3">
           {answers.map((answer) => (
             <button 
               key={answer._key}
               onClick={() => checkAnswer(answer)}
-              className='relative p-[12px] text-left transition bg-zinc-800 hover:bg-zinc-900 border border-zinc-700 hover:border-zinc-800'
+              className='relative p-3 text-left transition bg-zinc-800 hover:bg-zinc-900 border border-zinc-700 hover:border-zinc-800'
             >
               <span>
                 {answer.text} 
@@ -57,31 +57,23 @@ export default function Quiz({ props }) {
 
 function CorrectAnswerIcon() {
   return (
-    <FaCircleCheck style={{
-      position: 'absolute',
-      top: '14px',
-      right: '18px',
-      fontSize: '20px',
-      color: '#72D673',
-    }}/>
+    <FaCircleCheck 
+      className="absolute top-3.5 right-4 text-xl text-[#72D673]"
+    />
   )
 }
 
 function WrongAnswerIcon() {
   return (
-    <FaCircleXmark style={{
-      position: 'absolute',
-      top: '14px',
-      right: '18px',
-      fontSize: '20px',
-      color: '#ea7575',
-    }}/>
+    <FaCircleXmark 
+      className="absolute top-3.5 right-4 text-xl text-[#ea7575]"
+    />
   )
 }
 
 function Message({message, correctAnswer }) {
    return (
-    <div className="w-full absolute bottom-[28px] left-1/2 transform -translate-x-1/2 text-center">
+    <div className="w-full absolute bottom-7 left-1/2 transform -translate-x-1/2 text-center">
       <div style={{ color: correctAnswer ? '#72d673' : '#ea7575' }}>
         {message}
       </div>

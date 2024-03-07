@@ -9,11 +9,11 @@ export default async function PostsPage() {
   const posts = await getAllPosts()
 
   return (
-    <Container classNames="my-[80px]">
-      <h1 className='text-[38px] border-b border-b-zinc-900'>
+    <Container classNames="my-20">
+      <h1 className='text-4xl border-b border-b-zinc-900'>
         All Posts
       </h1>
-      <div className='mt-[30px]'>
+      <div className='mt-8'>
         {posts.map(({ title, slug }) => (
           <PostCard 
             key={slug}
@@ -29,12 +29,12 @@ export default async function PostsPage() {
 function PostCard({ title, slug }) {
   return (
     <article>
-      <h2 className='text-[20px]'>
+      <h2 className='text-xl'>
         {title}
       </h2>
       <Link 
         href={`/posts/${slug}`}
-        className='block mt-[8px]'
+        className='block mt-2'
       >
         Read More
       </Link>

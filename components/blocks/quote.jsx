@@ -11,7 +11,7 @@ export default function Quote({ props }) {
 
   return (
     <div 
-      className='my-[20px] flex flex-col justify-center items-center p-[60px] bg-zinc-900 text-white' 
+      className='my-5 flex flex-col justify-center items-center p-14 bg-zinc-900 text-white' 
       style={{ 
         backgroundColor: backgroundColor 
       }}
@@ -25,7 +25,7 @@ export default function Quote({ props }) {
         />
       </div>
       <div 
-        className='mt-[8px] text-[20px] md:text-[24px] text-center' 
+        className='mt-2 text-xl md:text-2xl text-center' 
         style={{ 
           color: theme === 'dark' ? 'white' : 'black' 
         }}
@@ -33,7 +33,7 @@ export default function Quote({ props }) {
         {quote}
       </div>
       <div 
-        className='mt-[14px] antialiased text-center text-white' 
+        className='mt-3.5 antialiased text-center text-white' 
         style={{
           color: theme === 'dark' ? 'white' : 'black',
         }}

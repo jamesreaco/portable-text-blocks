@@ -9,7 +9,7 @@ export default async function Home() {
   const post = await getPostBySlug('demo')
 
   return (
-    <Container classNames="my-[80px]">
+    <Container classNames="my-20">
       <Post post={post} />
     </Container>
   )
