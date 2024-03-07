@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { MdLightbulbOutline } from "react-icons/md";
 import { IoMdAlert } from "react-icons/io";
 
@@ -7,13 +8,16 @@ export default function Callout({ props }) {
 
   return (
     <div 
-      className='my-5 flex flex-col md:flex-row items-start gap-5 p-10 text-white' 
-      style={{ 
-        backgroundColor: intent === 'tip' ? '#073e33' : '#6d2929' 
-      }}
+      className={cn('my-5 flex flex-col md:flex-row items-start gap-5 p-10 text-white bg-[#6d2929]', {
+        'bg-[#073e33]': intent === 'tip'
+      })}
     >
       <div>
-        {intent === 'tip' ? <MdLightbulbOutline size={30}/> : <IoMdAlert size={30}/>}
+        {intent === 'tip' ? (
+          <MdLightbulbOutline size={30}/>
+        ) : (
+          <IoMdAlert size={30}/>
+        )}
       </div>
       <div>
         <div className='text-lg md:text-xl font-medium'>

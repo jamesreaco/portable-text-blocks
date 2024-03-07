@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { MdFormatQuote } from "react-icons/md";
 
 export default function Quote({ props }) {
@@ -19,24 +20,22 @@ export default function Quote({ props }) {
       <div>
         <MdFormatQuote 
           size={40} 
-          style={{ 
-            color: theme === 'dark' ? 'white' : 'black' 
-          }}
+          className={cn('text-black', {
+            'text-white': theme === 'dark'
+          })}
         />
       </div>
       <div 
-        className='mt-2 text-xl md:text-2xl text-center' 
-        style={{ 
-          color: theme === 'dark' ? 'white' : 'black' 
-        }}
+        className={cn('mt-2 text-xl md:text-2xl text-center text-black', {
+          'text-white': theme === 'dark'
+        })} 
       >
         {quote}
       </div>
       <div 
-        className='mt-3.5 antialiased text-center text-white' 
-        style={{
-          color: theme === 'dark' ? 'white' : 'black',
-        }}
+        className={cn('mt-3.5 antialiased text-center text-white', {
+          'text-white': theme === 'dark'
+        })} 
       >
         {author}
       </div>

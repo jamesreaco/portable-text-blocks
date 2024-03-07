@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
 
@@ -74,7 +75,9 @@ function WrongAnswerIcon() {
 function Message({message, correctAnswer }) {
    return (
     <div className="w-full absolute bottom-7 left-1/2 transform -translate-x-1/2 text-center">
-      <div style={{ color: correctAnswer ? '#72d673' : '#ea7575' }}>
+      <div className={cn('text-[#ea7575]', {
+        'text-[#72d673]': correctAnswer
+      })}>
         {message}
       </div>
     </div>
